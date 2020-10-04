@@ -20,7 +20,7 @@ public class Launcher extends JavaPlugin {
 		EntityPlayer npc;
 		MinecraftServer server = ((CraftServer)this.getServer()).getServer();
 		WorldServer worldServer = ((CraftWorld)this.getServer().getWorlds().get(0)).getHandle();
-		npc = new EntityPlayer(server,worldServer,new GameProfile(UUID.randomUUID(),ChatColor.DARK_AQUA + "" + ChatColor.BOLD + "I AM GOD"), new PlayerInteractManager(worldServer));
+		npc = new EntityPlayer(server,worldServer,new GameProfile(UUID.randomUUID(),ChatColor.DARK_AQUA + "" + ChatColor.BOLD + "Hello"), new PlayerInteractManager(worldServer));
 		
 		this.getServer().getPluginManager().registerEvents(new NPC(npc), this);
 	}
